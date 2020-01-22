@@ -1,0 +1,45 @@
+syntax "nanorc" "\.?nanorc$"
+
+## keywords
+color brightyellow "[[:<:]](include|color)[[:>:]]"
+color magenta "[[:<:]](icolor)[[:>:]]"
+color brightred "[[:<:]](syntax)[[:>:]]"
+
+## colors
+color green "[[:<:]](green)[[:>:]]"
+color brightgreen "[[:<:]](brightgreen)[[:>:]]"
+color blue "[[:<:]](blue)[[:>:]]"
+color brightblue "[[:<:]](brightblue)[[:>:]]"
+color red  "[[:<:]](red)[[:>:]]"
+color brightred  "[[:<:]](brightred)[[:>:]]"
+color yellow  "[[:<:]](yellow)[[:>:]]"
+color brightyellow  "[[:<:]](brightyellow)[[:>:]]"
+color magenta  "[[:<:]](magenta)[[:>:]]"
+color brightmagenta  "[[:<:]](brightmagenta)[[:>:]]"
+color cyan "[[:<:]](cyan)[[:>:]]"
+color brightcyan "[[:<:]](brightcyan)[[:>:]]"
+color white "[[:<:]](white)[[:>:]]"
+color brightwhite "[[:<:]](brightwhite)[[:>:]]"
+color black "[[:<:]](black)[[:>:]]"
+color brightblack "[[:<:]](brightblack)[[:>:]]"
+
+## Strings
+icolor green ""(\\.|[^"])*""
+
+## Closed quotes
+color green "['\"].*['\"]"
+
+## Comments
+icolor cyan "^[[:space:]]*#.*$"
+
+## Possible errors and parameters
+#icolor brightred "^[[:space:]]*((un)?set|include|syntax|i?color).*$"
+
+## Keywords
+# icolor brightgreen "^[[:space:]]*(set|unset)[[:space:]]+(allow_insecure_backup|autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|poslog|preserve|punct)\>" "^[[:space:]]*(set|unset)[[:space:]]+(quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|softwrap|speller|suspend|suspendenable|tabsize|tabstospaces|tempfile|undo|view|whitespace|wordbounds)\>"
+# icolor green "^[[:space:]]*(bind|set|unset|syntax|header|include|magic)\>"
+
+## Colors
+# icolor yellow "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|green|yellow|magenta|cyan)?(,(white|black|red|blue|green|yellow|magenta|cyan))?\>"
+# icolor magenta "^[[:space:]]*i?color\>" "\<(start|end)="
+

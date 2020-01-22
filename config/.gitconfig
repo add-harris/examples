@@ -1,0 +1,13 @@
+[alias]
+	co = checkout
+	coh = checkout HEAD
+	com = checkout master
+	pom = pull origin master
+	st = status
+	br = branch
+	l = log
+	cmt = commit -m
+	cm = commit
+[user]
+	email = adam.harrison1@dwp.gsi.gov.uk
+	name = adam.harrison

@@ -1,0 +1,46 @@
+# Supports `YAML` files
+syntax "YAML" "\.ya?ml$"
+# header "^(---|===)" "%YAML"
+
+## Keys
+#color yellow "^\s*[\$A-Za-z0-9_-]+\:"
+color brightblue "^-*[\s \t]*[\$A-Za-z0-9_-]+\:"
+color brightblue "^\s*@[\$A-Za-z0-9_-]+\:"
+
+## Slashes
+color cyan "(\{|\}|\(|\)|\;|\]|\[|`|\\|\/|!|\.|-|\|)"
+
+## Arrays - is covered in Slashes above
+color cyan "\[" "\]" ":\s+[|>]" "^\s*- "
+
+## Values
+color white ":\s.+$"
+## Booleans
+icolor brightcyan " (y|yes|n|no|true|false|on|off)$"
+color brightgreen "[[:<:]](true|True|TRUE|yes)[[:>:]]"
+color brightred "[[:<:]](false|False|FALSE|no)[[:>:]]"
+
+## Numbers
+color magenta " [[:digit:]]+(\.[[:digit:]]+)?"
+
+## Reserved
+color yellow ""[[:<:]](binary|bool|float|int|map|null|omap|seq|set|str)[[:>:]]"
+
+## Comments
+color brightwhite "#.*$"
+
+## Errors
+color ,red ":\w.+$"
+color ,red ":'.+$"
+color ,red ":".+$"
+color ,red "\s+$"
+
+## Non closed quote
+color ,red "['\"].*[^['\"]]*$"
+
+## Closed quotes
+color green "['\"].*['\"]"
+
+## Equal sign
+color brightgreen ":( |$)"
+

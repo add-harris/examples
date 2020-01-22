@@ -1,0 +1,13 @@
+syntax "ml" ".*\.([jrs]?html?|xml|sgml?|lhtml|opml|kdevelop|vcproj|glade|xsd|plist|gcs|dtd|dcl)$" "catalog$" "docbook$"
+color white "^.+$"
+color green  start="<" end=">"
+color cyan  "<[^> ]+"
+color cyan  ">"
+color blue start="<!DOCTYPE" end="[/]?>"
+color yellow start="<!--" end="-->"
+color red  "&[^;]*;"
+
+# custom
+color brightred  "(\$)"
+color yellow  "(\{|\})"
+color brightgreen  "(=|\.|-)"

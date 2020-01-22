@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: basic-service
+
+server:
+  port: 8888
+  servlet:
+    context-path: /basic-service
+

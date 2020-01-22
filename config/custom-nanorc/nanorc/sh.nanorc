@@ -1,0 +1,32 @@
+## Here is an example for Bourne shell scripts.
+##
+syntax "SH" "\.sh$" "\.bashrc" "bashrc" "\.bash_aliases" "bash_aliases" "\.bash_functions" "bash_functions" "\.bash_login" "\.bash_logout" "\.bash_profile" "bash_profile" "\.profile" "revise\..+$"
+# header "^#!.*/(env +)?(ba)?sh( |$)"
+
+## keywords:
+color brightblue "[[:<:]](case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)[[:>:]]"
+# color green "\<(case|do|done|elif|else|esac|fi|for|function|if|in|select|then|time|until|while)\>"
+
+# slashes and braces
+color cyan "(\{|\}|\(|\)|\;|\]|\[|`|\\|\|!|-|\|)"
+color red "(\$|&|=|<|>)"
+color green "-[Ldefgruwx]\>"
+color green "-(eq|ne|gt|lt|ge|le|s|n|z)\>"
+
+## commands
+## builtins:
+color brightred "[[:<:]](alias|bg|bind|break|builtin|caller|cd|command|compgen|complete|compopt|continue|declare|dirs|disown|echo|enable|eval|exec|exit|export|false|fc|fg|getopts|hash|help|history|jobs|kill|let|local|logout|mapfile|popd|printf|pushd|pwd|read|readarray|readonly|return|set|shift|shopt|source|suspend|test|times|trap|true|type|typeset|ulimit|umask|unalias|unset|wait)[[:>:]]"
+## not buitins:
+color brightred "[[:<:]](cat|chmod|chown|cp|env|grep|install|ln|make|mkdir|mv|rm|sed|tar|touch)[[:>:]]"
+
+icolor brightgreen "^\s+[0-9A-Z_]+\s+\(\)"
+
+# variables
+icolor brightyellow "\$\{?[0-9A-Z_!@#$*?-]+\}?"
+
+# Strings
+color green ""(\\.|[^"])*"" "'(\\.|[^'])*'"
+
+# comments
+color yellow "(^|[[:space:]])#.*$"
+color ,yellow "[[:space:]]+$"
