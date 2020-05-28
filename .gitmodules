@@ -1,9 +1,0 @@
-[submodule "scala/katas/romans"]
-	path = scala/katas/romans
-	url = git@github.com:add-harris/romans.git
-[submodule "scala/katas/brackets-excersise"]
-	path = scala/katas/brackets-excersise
-	url = git@github.com:add-harris/brackets-excersise.git
-[submodule "scala/katas/some-katas"]
-	path = scala/katas/some-katas
-	url = git@github.com:add-harris/some-katas.git
