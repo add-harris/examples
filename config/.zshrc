@@ -138,10 +138,9 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
 export CACERTS=$JAVA_HOME/lib/security/cacerts
 
-export ANCHORE_CLI_USER=admin
-export ANCHORE_CLI_PASS=admin
-export ANCHORE_CLI_URL=https://anchore.mgmt.exchange/v1/
-
+export CERT_PATH=/Users/adam.harrison/Documents/certs/dev-certs/cert
+export KEY_PATH=/Users/adam.harrison/Documents/certs/dev-certs/key
+export ROOT_CERT_PATH=/Users/adam.harrison/Documents/certs/exchange_root_ca.crt
 
 # points maven to local copy of cacerts
 # localCacerts="-Djavax.net.ssl.trustStore=/Users/chris.hulley/Documents/certificates/cacerts"
